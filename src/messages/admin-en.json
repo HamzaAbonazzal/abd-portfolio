@@ -1,0 +1,167 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "skills": "Skills",
+    "messages": "Messages",
+    "profile": "Profile",
+    "viewSite": "View Site",
+    "logout": "Logout",
+    "adminPanel": "Admin Panel"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "overview": "Overview",
+    "stats": {
+      "projects": "Projects",
+      "skills": "Skills",
+      "messages": "Messages",
+      "unreadMessages": "Unread Messages"
+    },
+    "recentMessages": "Recent Messages",
+    "recentProjects": "Recent Projects",
+    "noMessages": "No messages yet",
+    "noProjects": "No projects yet",
+    "viewAll": "View All",
+    "quickActions": "Quick Actions",
+    "addProject": "Add Project",
+    "addSkill": "Add Skill"
+  },
+  "projects": {
+    "title": "Projects",
+    "addNew": "Add Project",
+    "edit": "Edit Project",
+    "list": "Projects List",
+    "empty": "No projects yet. Start by adding your first project!",
+    "search": "Search...",
+    "table": {
+      "project": "Project",
+      "category": "Category",
+      "tools": "Tools",
+      "featured": "Featured",
+      "order": "Order",
+      "actions": "Actions"
+    },
+    "form": {
+      "titleAr": "Title (Arabic)",
+      "titleEn": "Title (English)",
+      "descAr": "Description (Arabic)",
+      "descEn": "Description (English)",
+      "categoryAr": "Category (Arabic)",
+      "categoryEn": "Category (English)",
+      "coverImage": "Cover Image URL",
+      "coverImageHint": "Example: /images/projects/project1.jpg",
+      "tools": "Tools",
+      "toolsHint": "Separate tools with comma: Figma, Photoshop",
+      "liveUrl": "Live URL",
+      "behanceUrl": "Behance URL",
+      "featured": "Featured Project",
+      "featuredHint": "Will appear in the featured section on homepage",
+      "order": "Display Order",
+      "orderHint": "Smaller numbers appear first",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleteConfirm": "Are you sure you want to delete this project?",
+      "success": {
+        "create": "Project created successfully",
+        "update": "Project updated successfully",
+        "delete": "Project deleted successfully"
+      },
+      "error": "An error occurred, please try again"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "addNew": "Add Skill",
+    "edit": "Edit Skill",
+    "list": "Skills List",
+    "empty": "No skills yet",
+    "table": {
+      "name": "Skill",
+      "level": "Level",
+      "category": "Category",
+      "order": "Order",
+      "actions": "Actions"
+    },
+    "categories": {
+      "design": "Design",
+      "tools": "Tools",
+      "soft": "Soft Skills"
+    },
+    "form": {
+      "name": "Skill Name",
+      "namePlaceholder": "Example: Figma",
+      "level": "Level (%)",
+      "category": "Category",
+      "order": "Display Order",
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "deleteConfirm": "Are you sure you want to delete this skill?",
+      "error": "An error occurred, please try again"
+    }
+  },
+  "messages": {
+    "title": "Messages",
+    "list": "Inbox",
+    "empty": "No messages yet",
+    "unread": "Unread",
+    "read": "Read",
+    "markAsRead": "Mark as read",
+    "markAsUnread": "Mark as unread",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this message?",
+    "filters": {
+      "all": "All",
+      "unread": "Unread",
+      "read": "Read"
+    },
+    "detail": {
+      "from": "From",
+      "subject": "Subject",
+      "message": "Message",
+      "date": "Date",
+      "close": "Close",
+      "reply": "Reply via Email"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Update your personal information",
+    "sections": {
+      "basic": "Basic Information",
+      "contact": "Contact Information",
+      "socials": "Social Links",
+      "stats": "Statistics"
+    },
+    "form": {
+      "nameAr": "Name (Arabic)",
+      "nameEn": "Name (English)",
+      "titleAr": "Job Title (Arabic)",
+      "titleEn": "Job Title (English)",
+      "bioAr": "Bio (Arabic)",
+      "bioEn": "Bio (English)",
+      "email": "Email",
+      "phone": "Phone",
+      "locationAr": "Location (Arabic)",
+      "locationEn": "Location (English)",
+      "avatar": "Avatar URL",
+      "behance": "Behance",
+      "dribbble": "Dribbble",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "experience": "Years of Experience",
+      "projects": "Completed Projects",
+      "clients": "Happy Clients",
+      "awards": "Awards",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "success": "Profile updated successfully",
+      "error": "An error occurred, please try again"
+    }
+  }
+}

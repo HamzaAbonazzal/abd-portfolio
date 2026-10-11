@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-deep: #1e3a8a;
+  --color-primary-glow: #93c5fd;
+
+  --color-teal: #0d9488;
+  --color-accent: #10b981;
+  --color-accent-light: #34d399;
+
+  --color-dark-bg: #070b16;
+  --color-dark-card: #0f1524;
+  --color-dark-border: #1a2235;
+  --color-dark-text: #f1f5f9;
+  --color-dark-muted: #8ba0bf;
+
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e8f0;
+  --color-light-text: #0a0e1a;
+  --color-light-muted: #64748b;
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-arabic: var(--font-cairo), sans-serif;
+
+  --animate-fade-in: fadeIn 0.6s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.8);
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1280px;
+}
+
+/* ============================================
+   الخلفية: Grid Dot Matrix + هالات
+   ============================================ */
+
+html {
+  background-color: #070b16;
+  background-image:
+    /* 🎨 شبكة نقاط دقيقة مثل برامج التصميم */
+    radial-gradient(circle, rgba(255, 255, 255, 0.14) 1px, transparent 1.5px),
+    /* 🔷 هالة زرقاء رئيسية في الأعلى يساراً */
+    radial-gradient(ellipse 1000px 800px at 15% 15%,
+      rgba(30, 58, 138, 0.32) 0%,
+      transparent 65%),
+    /* 💚 هالة زمردية خفيفة في الأسفل يميناً */
+    radial-gradient(ellipse 800px 600px at 85% 90%,
+      rgba(16, 185, 129, 0.07) 0%,
+      transparent 60%),
+    /* 🎨 تدرج فحمي مزرق أساسي */
+    linear-gradient(180deg, #070b16 0%, #0a1226 50%, #070b16 100%);
+  background-size:
+    40px 40px,
+    auto,
+    auto,
+    auto;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+html.light {
+  background-color: #f8fafc;
+  background-image:
+    /* 🎨 شبكة نقاط زرقاء فاتحة */
+    radial-gradient(circle, rgba(59, 130, 246, 0.16) 1px, transparent 1.5px),
+    /* 🔷 هالة زرقاء ناعمة */
+    radial-gradient(ellipse 1000px 800px at 15% 15%,
+      rgba(59, 130, 246, 0.1) 0%,
+      transparent 65%),
+    /* 💚 هالة زمردية خفيفة */
+    radial-gradient(ellipse 800px 600px at 85% 90%,
+      rgba(16, 185, 129, 0.08) 0%,
+      transparent 60%),
+    /* 🎨 تدرج فاتح */
+    linear-gradient(180deg, #f8fafc 0%, #eef4ff 50%, #f8fafc 100%);
+  background-size:
+    40px 40px,
+    auto,
+    auto,
+    auto;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+/* ============================================
+   الأشكال العائمة (Parallax with Mouse)
+   ============================================ */
+
+.parallax-shape {
+  position: absolute;
+  transform: translate3d(calc(var(--mx, 0) * var(--depth, 10px)),
+      calc(var(--my, 0) * var(--depth, 10px)),
+      0);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: float-slow 7s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform;
+  pointer-events: none;
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+/* مؤشر الفأرة المخصص */
+@media (pointer: fine) {
+
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+/* إعدادات عامة */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: transparent;
+  min-height: 100vh;
+}

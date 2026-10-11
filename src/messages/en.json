@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "hireMe": "Hire Me"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "UI/UX",
+    "titleHighlight": "Designer",
+    "description": "I craft exceptional digital experiences combining beauty and function. From idea to execution, I turn your vision into visual reality.",
+    "viewWork": "View My Work",
+    "downloadCV": "Download CV",
+    "availableForWork": "Available for freelance",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me",
+    "heading": "I design visual solutions that inspire and make a difference",
+    "description": "Over the past years, I've worked with startups and brands to build visual identities and unforgettable user experiences. I believe good design isn't just beautiful — it must solve a real problem.",
+    "services": {
+      "title": "My Services",
+      "uiDesign": {
+        "title": "UI Design",
+        "desc": "Modern and attractive interfaces focused on details."
+      },
+      "uxDesign": {
+        "title": "UX Design",
+        "desc": "Smooth experiences based on user behavior studies."
+      },
+      "branding": {
+        "title": "Brand Identity",
+        "desc": "Complete identities reflecting your brand personality."
+      },
+      "prototyping": {
+        "title": "Interactive Prototypes",
+        "desc": "High-fidelity interactive prototypes for testing ideas."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "What I excel at",
+    "design": "Design Skills",
+    "tools": "Tools & Software"
+  },
+  "stats": {
+    "experience": "Years Experience",
+    "projects": "Projects Completed",
+    "clients": "Happy Clients",
+    "awards": "Awards Won"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A collection of my recent work",
+    "viewAll": "View All",
+    "viewProject": "View Project",
+    "featured": "Featured",
+    "categories": {
+      "all": "All"
+    },
+    "noProjects": "No projects in this category"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's work together",
+    "heading": "Have a project in mind?",
+    "description": "I'm always available for new projects. Send me a message and I'll respond as soon as possible.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "namePlaceholder": "Enter your name",
+      "emailPlaceholder": "example@email.com",
+      "subjectPlaceholder": "What do you want to talk about?",
+      "messagePlaceholder": "Write your message here...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred, please try again."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "tagline": "I design exceptional digital experiences.",
+    "quickLinks": "Quick Links",
+    "followMe": "Follow Me",
+    "rights": "All rights reserved.",
+    "description": "I craft exceptional digital experiences that help brands grow."
+  }
+}

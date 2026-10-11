@@ -1,0 +1,167 @@
+{
+  "sidebar": {
+    "dashboard": "لوحة التحكم",
+    "projects": "المشاريع",
+    "skills": "المهارات",
+    "messages": "الرسائل",
+    "profile": "الملف الشخصي",
+    "viewSite": "عرض الموقع",
+    "logout": "تسجيل الخروج",
+    "adminPanel": "لوحة الإدارة"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً",
+    "overview": "نظرة عامة",
+    "stats": {
+      "projects": "المشاريع",
+      "skills": "المهارات",
+      "messages": "الرسائل",
+      "unreadMessages": "رسائل غير مقروءة"
+    },
+    "recentMessages": "آخر الرسائل",
+    "recentProjects": "أحدث المشاريع",
+    "noMessages": "لا توجد رسائل بعد",
+    "noProjects": "لا توجد مشاريع بعد",
+    "viewAll": "عرض الكل",
+    "quickActions": "إجراءات سريعة",
+    "addProject": "إضافة مشروع",
+    "addSkill": "إضافة مهارة"
+  },
+  "projects": {
+    "title": "المشاريع",
+    "addNew": "إضافة مشروع",
+    "edit": "تعديل المشروع",
+    "list": "قائمة المشاريع",
+    "empty": "لا توجد مشاريع بعد. ابدأ بإضافة مشروعك الأول!",
+    "search": "ابحث...",
+    "table": {
+      "project": "المشروع",
+      "category": "التصنيف",
+      "tools": "الأدوات",
+      "featured": "مميز",
+      "order": "الترتيب",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "titleAr": "العنوان (بالعربية)",
+      "titleEn": "العنوان (بالإنجليزية)",
+      "descAr": "الوصف (بالعربية)",
+      "descEn": "الوصف (بالإنجليزية)",
+      "categoryAr": "التصنيف (بالعربية)",
+      "categoryEn": "التصنيف (بالإنجليزية)",
+      "coverImage": "رابط صورة الغلاف",
+      "coverImageHint": "مثال: /images/projects/project1.jpg",
+      "tools": "الأدوات",
+      "toolsHint": "افصل بين الأدوات بفاصلة: Figma, Photoshop",
+      "liveUrl": "رابط المشروع المباشر",
+      "behanceUrl": "رابط Behance",
+      "featured": "مشروع مميز",
+      "featuredHint": "سيظهر في قسم المشاريع المميزة بالصفحة الرئيسية",
+      "order": "ترتيب العرض",
+      "orderHint": "الأرقام الأصغر تظهر أولاً",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ...",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا المشروع؟",
+      "success": {
+        "create": "تم إنشاء المشروع بنجاح",
+        "update": "تم تحديث المشروع بنجاح",
+        "delete": "تم حذف المشروع بنجاح"
+      },
+      "error": "حدث خطأ، حاول مرة أخرى"
+    }
+  },
+  "skills": {
+    "title": "المهارات",
+    "addNew": "إضافة مهارة",
+    "edit": "تعديل المهارة",
+    "list": "قائمة المهارات",
+    "empty": "لا توجد مهارات بعد",
+    "table": {
+      "name": "المهارة",
+      "level": "المستوى",
+      "category": "التصنيف",
+      "order": "الترتيب",
+      "actions": "الإجراءات"
+    },
+    "categories": {
+      "design": "تصميم",
+      "tools": "أدوات",
+      "soft": "مهارات شخصية"
+    },
+    "form": {
+      "name": "اسم المهارة",
+      "namePlaceholder": "مثال: Figma",
+      "level": "المستوى (%)",
+      "category": "التصنيف",
+      "order": "ترتيب العرض",
+      "save": "حفظ",
+      "saving": "جارٍ الحفظ...",
+      "cancel": "إلغاء",
+      "deleteConfirm": "هل أنت متأكد من حذف هذه المهارة؟",
+      "error": "حدث خطأ، حاول مرة أخرى"
+    }
+  },
+  "messages": {
+    "title": "الرسائل",
+    "list": "صندوق الوارد",
+    "empty": "لا توجد رسائل بعد",
+    "unread": "غير مقروءة",
+    "read": "مقروءة",
+    "markAsRead": "تعليم كمقروءة",
+    "markAsUnread": "تعليم كغير مقروءة",
+    "delete": "حذف",
+    "deleteConfirm": "هل أنت متأكد من حذف هذه الرسالة؟",
+    "filters": {
+      "all": "الكل",
+      "unread": "غير مقروءة",
+      "read": "مقروءة"
+    },
+    "detail": {
+      "from": "من",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "date": "التاريخ",
+      "close": "إغلاق",
+      "reply": "الرد عبر البريد"
+    }
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "subtitle": "عدّل معلوماتك الشخصية",
+    "sections": {
+      "basic": "المعلومات الأساسية",
+      "contact": "معلومات التواصل",
+      "socials": "روابط التواصل الاجتماعي",
+      "stats": "الإحصائيات"
+    },
+    "form": {
+      "nameAr": "الاسم (بالعربية)",
+      "nameEn": "الاسم (بالإنجليزية)",
+      "titleAr": "المسمى الوظيفي (بالعربية)",
+      "titleEn": "المسمى الوظيفي (بالإنجليزية)",
+      "bioAr": "النبذة (بالعربية)",
+      "bioEn": "النبذة (بالإنجليزية)",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "locationAr": "الموقع (بالعربية)",
+      "locationEn": "الموقع (بالإنجليزية)",
+      "avatar": "رابط الصورة الشخصية",
+      "behance": "Behance",
+      "dribbble": "Dribbble",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "experience": "سنوات الخبرة",
+      "projects": "المشاريع المكتملة",
+      "clients": "العملاء السعداء",
+      "awards": "الجوائز",
+      "save": "حفظ التغييرات",
+      "saving": "جارٍ الحفظ...",
+      "success": "تم تحديث الملف الشخصي بنجاح",
+      "error": "حدث خطأ، حاول مرة أخرى"
+    }
+  }
+}
