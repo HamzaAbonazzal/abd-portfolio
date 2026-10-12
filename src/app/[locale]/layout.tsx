@@ -61,7 +61,7 @@ export default async function LocaleLayout({
         {/* الخلفية الإبداعية */}
         <DesignerBackground />
         {/* مؤشر الفأرة المخصص */}
-        <CustomCursor />
+        {/* <CustomCursor /> */}
 
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider

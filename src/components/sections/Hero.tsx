@@ -59,7 +59,7 @@ export default function Hero({ profile }: HeroProps) {
             {/* Title */}
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold">
               <span className="text-light-text dark:text-dark-text">
-                {t("title")}{" "}
+                {data.title[locale]}{" "}
               </span>
               <span className="text-primary">{t("titleHighlight")}</span>
             </h2>
