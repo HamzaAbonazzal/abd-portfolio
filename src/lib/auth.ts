@@ -2,12 +2,15 @@ import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
-const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) {
-  throw new Error("❌ Please define JWT_SECRET in .env.local");
+function getSecretKey(): Uint8Array {
+  const JWT_SECRET = process.env.JWT_SECRET;
+  if (!JWT_SECRET) {
+    throw new Error(
+      "❌ JWT_SECRET is not defined. Please add it to Vercel Environment Variables (or .env.local for local dev)."
+    );
+  }
+  return new TextEncoder().encode(JWT_SECRET);
 }
-
-const secretKey = new TextEncoder().encode(JWT_SECRET);
 const COOKIE_NAME = "admin_session";
 
 // ============ JWT ============
@@ -23,12 +26,12 @@ export async function signToken(payload: JWTPayload): Promise<string> {
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("7d")
-    .sign(secretKey);
+    .sign(getSecretKey());  
 }
 
 export async function verifyToken(token: string): Promise<JWTPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, secretKey);
+    const { payload } = await jwtVerify(token, getSecretKey());
     return payload as unknown as JWTPayload;
   } catch {
     return null;

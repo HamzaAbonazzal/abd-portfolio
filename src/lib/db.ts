@@ -1,15 +1,8 @@
 import mongoose from "mongoose";
 
-// ✅ إخفاء تحذير strictQuery (متوافق مع Mongoose 7)
 mongoose.set("strictQuery", true);
 
 const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  throw new Error(
-    "❌ Please define the MONGODB_URI environment variable in .env.local"
-  );
-}
 
 interface MongooseCache {
   conn: typeof mongoose | null;
@@ -27,6 +20,13 @@ if (!global.mongoose) {
 }
 
 async function connectDB(): Promise<typeof mongoose> {
+  // ✅ التحقق داخل الدالة (وليس في مستوى الوحدة)
+  if (!MONGODB_URI) {
+    throw new Error(
+      "❌ MONGODB_URI is not defined. Please add it to Vercel Environment Variables (or .env.local for local dev)."
+    );
+  }
+
   if (cached.conn) {
     return cached.conn;
   }
@@ -39,7 +39,7 @@ async function connectDB(): Promise<typeof mongoose> {
       serverSelectionTimeoutMS: 5000,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI!, opts).then((m) => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => {
       console.log("✅ MongoDB Connected Successfully");
       return m;
     });
