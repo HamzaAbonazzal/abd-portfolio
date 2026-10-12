@@ -46,7 +46,7 @@ export default function About() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
             {t("subtitle")}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-light-text dark:text-dark-text mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-light-text dark:text-dark-text mb-6">
             {t("title")}
           </h2>
           <p className="text-lg text-light-muted dark:text-dark-muted leading-relaxed">
@@ -68,7 +68,7 @@ export default function About() {
         </motion.div>
 
         {/* Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

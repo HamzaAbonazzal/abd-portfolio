@@ -151,7 +151,7 @@ export default function Contact({ profile }: ContactProps) {
             onSubmit={handleSubmit}
             className="lg:col-span-3 p-6 md:p-8 rounded-2xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border space-y-4"
           >
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-light-text dark:text-dark-text mb-2">
                   {t("form.name")}

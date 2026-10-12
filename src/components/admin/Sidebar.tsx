@@ -104,7 +104,7 @@ export default function Sidebar() {
       {/* Mobile Toggle */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50 w-10 h-10 rounded-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border flex items-center justify-center"
+        className="lg:hidden fixed top-4 left-4 rtl:left-auto rtl:right-4 z-[60] w-11 h-11 rounded-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border flex items-center justify-center shadow-lg"
         aria-label="Toggle sidebar"
       >
         {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

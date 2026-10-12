@@ -52,7 +52,7 @@ export default function ProjectsTable({ projects }: { projects: Project[] }) {
   return (
     <div className="rounded-2xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="w-full">
+        <table className="w-full min-w-[640px]">
           <thead className="bg-light-bg dark:bg-dark-bg border-b border-light-border dark:border-dark-border">
             <tr>
               <th className="text-start px-4 py-3 text-xs font-bold text-light-muted dark:text-dark-muted uppercase">

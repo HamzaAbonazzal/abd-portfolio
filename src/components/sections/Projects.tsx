@@ -79,7 +79,7 @@ export default function Projects({ projects }: ProjectsProps) {
             <button
               key={cat.key}
               onClick={() => setFilter(cat.key)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 filter === cat.key
                   ? "bg-primary text-white shadow-lg shadow-primary/30"
                   : "bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border text-light-muted dark:text-dark-muted hover:border-primary/50 hover:text-primary"
@@ -91,7 +91,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
               <motion.div
