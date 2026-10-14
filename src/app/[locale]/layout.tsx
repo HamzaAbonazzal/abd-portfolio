@@ -22,8 +22,8 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Designer Portfolio | بورتفوليو المصمم",
-  description: "UI/UX Designer Portfolio",
+  title: "Abdulwahid Abonazzal Graphic Designer Portfolio",
+  description: "Graphic Designer Portfolio",
 };
 
 export default async function LocaleLayout({
