@@ -16,6 +16,13 @@ export default function Hero({ profile }: HeroProps) {
   // Fallback إذا كانت البيانات فارغة
   const data = profile || staticProfile;
 
+  // ============================================
+  // استخراج البيانات من الـ profile مع fallback آمن
+  // ============================================
+  const displayName = data?.name?.[locale] || staticProfile.name[locale];
+  const displayTitle = data?.title?.[locale] || t("title");
+  const displayBio = data?.bio?.[locale] || t("description");
+
   const handleScrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -23,7 +30,7 @@ export default function Hero({ profile }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Decorations */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-72 sm:w-96 h-72 sm:h-96 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 -right-20 w-72 sm:w-96 h-72 sm:h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[500px] h-[400px] sm:h-[500px] bg-primary/5 rounded-full blur-3xl" />
@@ -49,24 +56,23 @@ export default function Hero({ profile }: HeroProps) {
               {t("greeting")}
             </p>
 
-            {/* Name */}
+            {/* Name - from profile */}
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <span className="text-light-text dark:text-dark-text">
-                {data.name[locale]}
+                {displayName}
               </span>
             </h1>
 
-            {/* Title */}
+            {/* Job Title - from profile */}
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold">
-              <span className="text-light-text dark:text-dark-text">
-                {data.title[locale]}{" "}
+              <span className="bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+                {displayTitle}
               </span>
-              <span className="text-primary">{t("titleHighlight")}</span>
             </h2>
 
-            {/* Description */}
+            {/* Bio - from profile */}
             <p className="text-base sm:text-lg text-light-muted dark:text-dark-muted max-w-lg leading-relaxed mx-auto lg:mx-0">
-              {t("description")}
+              {displayBio}
             </p>
 
             {/* CTA Buttons */}
@@ -79,7 +85,7 @@ export default function Hero({ profile }: HeroProps) {
                 {t("viewWork")}
               </a>
               <a
-                href={data.socials?.behance || "#"}
+                href={data?.socials?.behance || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-primary text-primary hover:bg-primary hover:text-white text-sm sm:text-base font-semibold transition hover:-translate-y-0.5"
@@ -106,23 +112,23 @@ export default function Hero({ profile }: HeroProps) {
                 <div className="w-full h-full rounded-full bg-light-bg dark:bg-dark-bg p-2">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center border border-primary/20">
                     <span className="text-5xl sm:text-7xl md:text-9xl font-bold text-primary select-none">
-                      {data.name[locale].charAt(0)}
+                      {displayName.charAt(0)}
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating badge - في المنتصف أسفل الدائرة (يعمل في RTL و LTR) */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-light-card dark:bg-dark-card border border-primary/30 shadow-2xl shadow-primary/20 whitespace-nowrap">
-                <p className="text-xs sm:text-sm font-semibold text-primary">
-                  {data.title[locale]}
+              {/* Floating badge - Job Title from profile */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-light-card dark:bg-dark-card border border-primary/30 shadow-2xl shadow-primary/20 whitespace-nowrap max-w-[90vw]">
+                <p className="text-xs sm:text-sm font-semibold text-primary truncate">
+                  {displayTitle}
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator - زر تفاعلي */}
+        {/* Scroll indicator */}
         <motion.button
           type="button"
           onClick={handleScrollToAbout}
